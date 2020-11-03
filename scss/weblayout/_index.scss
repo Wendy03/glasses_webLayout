@@ -1,0 +1,306 @@
+.banner {
+	background: url("https://hexschool.github.io/webLayoutTraining1st/week3/banner.png")
+		center center no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 860px;
+	color: $danger;
+	@include breakpoint(pad) {
+		height: 840px;
+	}
+	@include breakpoint(phone) {
+		background: url("https://hexschool.github.io/webLayoutTraining1st/week3/banner-sm.png")
+			center center no-repeat;
+		background-size: cover;
+		height: 394px;
+	}
+	.slogan {
+		height: 100%;
+	}
+}
+
+.intro {
+	.service {
+		@include breakpoint(pad) {
+			margin: 0 47px;
+		}
+
+		&_item {
+			width: calc(100% / 4 - 30px);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			@include breakpoint(pad) {
+				width: calc(100% / 2 - 50px);
+				margin-bottom: 40px;
+			}
+			@include breakpoint(phone) {
+				width: 100%;
+				margin-bottom: 40px;
+			}
+			img {
+				margin-bottom: 40px;
+			}
+		}
+	}
+	@include breakpoint(pad) {
+		.time {
+			order: 1;
+		}
+		.protect {
+			order: 2;
+		}
+		.price {
+			order: 3;
+		}
+		.glasses {
+			order: 4;
+		}
+	}
+	@include breakpoint(phone) {
+		.time {
+			order: 1;
+		}
+		.protect {
+			order: 2;
+		}
+		.price {
+			order: 3;
+		}
+		.glasses {
+			order: 4;
+		}
+	}
+}
+
+.classic {
+	.product {
+		&_item {
+			text-transform: uppercase;
+			&:nth-child(even) {
+				flex-direction: row-reverse;
+				@include breakpoint(pad) {
+					flex-direction: row;
+				}
+			}
+			@include breakpoint(phone) {
+				position: relative;
+				margin-bottom: 8px;
+			}
+		}
+		&_img {
+			width: 60%;
+			@include breakpoint(phone) {
+				width: 100%;
+			}
+		}
+		&_title {
+			display: flex;
+			justify-content: center;
+			margin-left: 30px;
+			font-style: italic;
+			font-weight: 900;
+			&:nth-child(even) {
+				margin-right: 30px;
+			}
+			img {
+				margin-right: 8px;
+			}
+			@include breakpoint(pad) {
+				h2 {
+					font-size: 1.75rem;
+					line-height: 42px;
+				}
+				img {
+					width: 32px;
+					height: 32px;
+				}
+			}
+			@include breakpoint(phone) {
+				position: absolute;
+				margin-left: 0;
+				z-index: 1;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				img,
+				h2 {
+					color: white;
+				}
+				img {
+					filter: brightness(500);
+				}
+			}
+		}
+	}
+}
+
+.crossover {
+	background: url("https://hexschool.github.io/webLayoutTraining1st/week3/bg.png")
+		center center no-repeat;
+	&_list {
+		@include breakpoint(phone) {
+			flex-wrap: wrap;
+		}
+	}
+	&_item {
+		position: relative;
+		width: 48.75%;
+		.overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(255, 255, 255, 0.5);
+			z-index: 1;
+		}
+		@include breakpoint(phone) {
+			width: 100%;
+		}
+	}
+	&_img {
+		z-index: 0;
+		position: relative;
+	}
+	&_title {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: 50%;
+		font-size: 72px;
+		width: 100%;
+		text-align: center;
+		transform: translate(-50%, -50%);
+		color: $white;
+	}
+	@include breakpoint(pad) {
+		p {
+			font-size: 32px;
+			line-height: 25px;
+			color: $primary;
+		}
+	}
+	@include breakpoint(phone) {
+		.double {
+			margin-bottom: 16px;
+		}
+	}
+}
+
+.customs {
+	.recommend {
+		&_card {
+			width: calc(100% / 4 - 15px);
+			border: 1px solid #dee2e6;
+			.content {
+				padding: 0 16px;
+			}
+			.update {
+				margin: 10px 0 15px;
+				color: $muted;
+			}
+			.name {
+				margin: 14px 0 7px;
+			}
+			@include breakpoint(pad) {
+				width: calc(100% / 2 - 15px);
+				margin-bottom: 28px;
+			}
+			@include breakpoint(phone) {
+				width: 100%;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.contact {
+	padding: 64px 0 80px;
+	background-color: $pink;
+	@include breakpoint(pad) {
+		padding: 40px 159px;
+	}
+	@include breakpoint(phone) {
+		padding: 32px 15px 40px;
+	}
+	.content {
+		max-width: 730px;
+		margin: 0 auto;
+		@include breakpoint(pad) {
+			max-width: 450px;
+		}
+	}
+	&_form {
+		margin-top: 20px;
+	}
+	input,
+	textarea {
+		width: 100%;
+		margin: 4px 0 16px;
+		padding: 14px 16px;
+		border: 1px solid $dark;
+		background-color: transparent;
+		@include breakpoint(pad) {
+			font-size: 14px;
+		}
+		&::placeholder {
+			font-size: 16px;
+			@include breakpoint(pad) {
+				font-size: 14px;
+			}
+		}
+	}
+	input[type="checkbox"] + label {
+		display: inline-block;
+		cursor: pointer;
+		padding-left: 4px;
+	}
+	input[type="checkbox"] {
+		display: none;
+	}
+	input[type="checkbox"] + label::before {
+		content: "\2714";
+		border: 1px solid #000;
+		border-radius: 2px;
+		display: inline-block;
+		vertical-align: middle;
+		width: 16px;
+		height: 16px;
+		padding-left: 2px;
+		margin: -2px 1px 0 0;
+		color: transparent;
+		@include breakpoint(pad) {
+			width: 14px;
+			height: 14px;
+		}
+	}
+	input[type="checkbox"]:checked + label:before {
+		background-color: $primary;
+		color: $white;
+	}
+	.submit {
+		margin-top: 42px;
+		text-align: center;
+	}
+
+	input[type="submit"] {
+		width: 350px;
+		cursor: pointer;
+		border: none;
+		background: $primary;
+		color: $white;
+		@include breakpoint(pad) {
+			width: 210px;
+			font-size: 14px;
+		}
+		@include breakpoint(phone) {
+			width: 165px;
+		}
+		&:hover {
+			background: $danger;
+		}
+	}
+}

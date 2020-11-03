@@ -1,0 +1,45 @@
+.nav {
+	padding: 30px 56px;
+	align-items: center;
+	@include breakpoint(pad) {
+		padding: 30px 19px;
+	}
+	@include breakpoint(phone) {
+		padding: 0;
+		flex-wrap: wrap;
+	}
+	&_list {
+		@include breakpoint(phone) {
+			flex-wrap: wrap;
+		}
+	}
+	&_brand {
+		padding: 0 32px;
+		@include breakpoint(pad) {
+			padding: 0 20px;
+		}
+		@include breakpoint(phone) {
+			margin: 10px auto;
+			margin-bottom: 10.86px;
+		}
+	}
+	&_item {
+		padding: 0 32px;
+		@include breakpoint(pad) {
+			padding: 0 20px;
+		}
+		@include breakpoint(phone) {
+			margin: 0;
+			padding: 8px 53px;
+			border: 1px solid $white;
+			width: 50%;
+			text-align: center;
+		}
+		a {
+			color: $white;
+			&:hover {
+				border-bottom: 3px solid $white;
+			}
+		}
+	}
+}
