@@ -1,0 +1,11 @@
+@mixin breakpoint($point) {
+	@if $point == pad {
+		@media only screen and(max-width: 992px) {
+			@content;
+		}
+	} @else if $point == phone {
+		@media only screen and(max-width: 767px) {
+			@content;
+		}
+	}
+}
