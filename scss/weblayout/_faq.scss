@@ -1,0 +1,15 @@
+.faq {
+	&_title {
+		margin-bottom: 36px;
+	}
+	&_ans {
+		margin-left: 95px;
+		line-height: 21px;
+		@include breakpoint(pad) {
+			margin-left: 59px;
+		}
+		@include breakpoint(phone) {
+			margin-left: 0;
+		}
+	}
+}
