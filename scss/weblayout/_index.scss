@@ -193,6 +193,9 @@
 		&_card {
 			width: calc(100% / 4 - 15px);
 			border: 1px solid #dee2e6;
+			img {
+				width: 100%;
+			}
 			.content {
 				padding: 0 16px;
 			}
@@ -269,8 +272,8 @@
 		vertical-align: middle;
 		width: 16px;
 		height: 16px;
-		padding-left: 2px;
-		margin: -2px 1px 0 0;
+		padding-left: 1px;
+		margin: -3px 1px 0 0;
 		color: transparent;
 		@include breakpoint(pad) {
 			width: 14px;

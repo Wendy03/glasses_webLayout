@@ -1,6 +1,5 @@
 .opticalContent {
 	.optical {
-		flex-wrap: wrap;
 		&_item {
 			width: calc(100% / 4 - 30px);
 			margin: 0 15px 104px;
@@ -11,18 +10,20 @@
 				font-size: 24px;
 				line-height: 36px;
 			}
-			.color-1 {
-				background-color: #5f3e2d;
-				width: 24px;
-				height: 24px;
-				border-radius: 4px;
-				margin-right: 8px;
-			}
-			.color-2 {
-				background-color: #b75929;
-				width: 24px;
-				height: 24px;
-				border-radius: 4px;
+			.color {
+				&-darkBrown {
+					background-color: #5f3e2d;
+					margin-right: 8px;
+					width: 24px;
+					height: 24px;
+					border-radius: 4px;
+				}
+				&-lightBrown {
+					background-color: #b75929;
+					width: 24px;
+					height: 24px;
+					border-radius: 4px;
+				}
 			}
 			@include breakpoint(pad) {
 				width: calc(100% / 2 - 30px);
@@ -50,7 +51,6 @@
 }
 .sunglassesContent {
 	.sunglasses {
-		flex-wrap: wrap;
 		&_item {
 			width: calc(100% / 3 - 30px);
 			margin: 0 15px 104px;
@@ -61,19 +61,22 @@
 				font-size: 18px;
 				line-height: 30px;
 			}
-			.color-1 {
-				background-color: #5f3e2d;
-				width: 24px;
-				height: 24px;
-				border-radius: 4px;
-				margin-right: 8px;
+			.color {
+				&-darkBrown {
+					background-color: #5f3e2d;
+					width: 24px;
+					height: 24px;
+					border-radius: 4px;
+					margin-right: 8px;
+				}
+				&-lightBrown {
+					background-color: #b75929;
+					width: 24px;
+					height: 24px;
+					border-radius: 4px;
+				}
 			}
-			.color-2 {
-				background-color: #b75929;
-				width: 24px;
-				height: 24px;
-				border-radius: 4px;
-			}
+
 			@include breakpoint(pad) {
 				width: calc(100% / 2 - 30px);
 				img {

@@ -33,8 +33,7 @@
 		&_item {
 			border: 1px solid #00000020;
 			width: calc(100% / 3 - 30px);
-			margin-right: 30px;
-			margin-bottom: 52px;
+			margin: 0 15px 52px;
 		}
 		&_header {
 			padding: 16px 12px;
@@ -133,7 +132,7 @@
 	}
 	.storeCard {
 		&_img {
-			width: 445px;
+			max-width: 445px;
 			height: 224px;
 			background: url("https://hexschool.github.io/webLayoutTraining1st/week4/locate.png") center center no-repeat;
 			background-size: cover;
@@ -154,7 +153,6 @@
 			}
 		}
 		&_map {
-			width: 100%;
 			margin-left: 15px;
 		}
 		@include breakpoint(pad) {
