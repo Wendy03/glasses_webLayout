@@ -1714,8 +1714,17 @@ footer .copyright .clause_item:hover {
   }
 }
 
+.storeContent .storeCard {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.storeContent .storeCard .content {
+  width: 40%;
+}
+
 .storeContent .storeCard_img {
-  max-width: 445px;
   height: 224px;
   background: url("https://hexschool.github.io/webLayoutTraining1st/week4/locate.png") center center no-repeat;
   background-size: cover;
@@ -1741,7 +1750,7 @@ footer .copyright .clause_item:hover {
 }
 
 .storeContent .storeCard_map {
-  margin-left: 15px;
+  width: 57.2%;
 }
 
 @media only screen and (max-width: 992px) {
@@ -1752,6 +1761,7 @@ footer .copyright .clause_item:hover {
             flex-direction: column;
   }
   .storeContent .storeCard .content {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1763,8 +1773,11 @@ footer .copyright .clause_item:hover {
     font-size: 14px;
   }
   .storeContent .storeCard_img {
-    width: 330px;
+    width: 50%;
     margin-right: 30px;
+  }
+  .storeContent .storeCard_info {
+    width: 50%;
   }
   .storeContent .storeCard_info_name {
     font-size: 16px;
@@ -1775,6 +1788,7 @@ footer .copyright .clause_item:hover {
   }
   .storeContent .storeCard_map {
     width: 100%;
+    height: 465px;
     margin-left: 0;
   }
 }
@@ -1789,6 +1803,9 @@ footer .copyright .clause_item:hover {
     margin-bottom: 16px;
   }
   .storeContent .storeCard_img {
+    width: 100%;
+  }
+  .storeContent .storeCard_info {
     width: 100%;
   }
   .storeContent .storeCard_map {
