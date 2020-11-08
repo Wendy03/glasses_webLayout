@@ -28,6 +28,9 @@
 			border: 1px solid #00000020;
 			width: calc(100% / 3 - 30px);
 			margin: 0 15px 52px;
+			img{
+				width: 100%;
+			}
 		}
 		&_header {
 			padding: 16px 12px;
