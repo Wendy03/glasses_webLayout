@@ -1,30 +1,24 @@
-.locationContent {
+.location {
 	.mapSelect {
-		width: 44%;
-		margin-bottom: 38px;
+		width: 45%;
+    margin-bottom: 38px;
 		.selection {
 			font-size: 24px;
+			width: 21.82%
 		}
 		select {
-			width: 237px;
-			height: 46px;
-			margin-left: 20px;
-			option {
-				padding: 0px 2px 1px;
-				display: block;
-				min-height: 1.2em;
-			}
+			width: 73.64%;
 		}
 		@include breakpoint(pad) {
 			width: 50%;
 			.selection {
 				font-size: 16px;
-			}
+      }
 		}
 		@include breakpoint(phone) {
 			width: 100%;
 			select {
-				width: 227px;
+				width: 65.8%;
 				height: 36px;
 			}
 		}
@@ -99,39 +93,29 @@
 }
 .storeContent {
 	.storeSelect {
-		width: 46%;
-		margin-bottom: 32px;
+    width: 40.09%;
+    margin-bottom: 32px;
 		.selection {
 			font-size: 24px;
 		}
 		select {
+			width: 73%;
 			height: 45px;
-			margin-left: 22px;
-			font-size: 20px;
-			option {
-				padding: 0px 2px 1px;
-				min-height: 1.2em;
-				font-size: 18px;
-				display: block;
-			}
 		}
 		@include breakpoint(pad) {
 			width: 50%;
-		}
+      .selection {
+        font-size: 16px;
+      }
+    }
 		@include breakpoint(phone) {
 			width: 100%;
-			.selection {
-				font-size: 16px;
-			}
-			select {
-				option {
-					font-size: 16px;
-				}
-			}
+      .selection {
+        font-size: 14px;
+      }
 		}
 	}
 	.storeCard {
-		justify-content: space-between;
 		.content{
 			width: 40%
 		}

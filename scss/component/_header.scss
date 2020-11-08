@@ -6,11 +6,8 @@
 	}
 	@include breakpoint(phone) {
 		padding: 0;
-		flex-wrap: wrap;
-	}
-	&_list {
-		@include breakpoint(phone) {
-			flex-wrap: wrap;
+		&_list {
+			width: 100%;
 		}
 	}
 	&_brand {
@@ -25,20 +22,27 @@
 	}
 	&_item {
 		padding: 0 32px;
+		font-size: 20px;
 		@include breakpoint(pad) {
 			padding: 0 20px;
 		}
 		@include breakpoint(phone) {
 			margin: 0;
-			padding: 8px 53px;
 			border: 1px solid $white;
 			width: 50%;
 			text-align: center;
 		}
 		a {
 			color: $white;
+			display: block;
+			padding: 8px 0;
+		}
+		&:hover {
+			background-image: linear-gradient(0deg, $danger 50%, transparent 50.1%);
+		}
+		@include breakpoint(phone) {
 			&:hover {
-				border-bottom: 3px solid $white;
+				background-color: $danger;
 			}
 		}
 	}

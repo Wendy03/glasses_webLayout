@@ -22,25 +22,26 @@ footer {
 		padding-top: 12px;
 		border-top: 1px solid $white;
 		&_content {
+      width: 83.06%;
 			p {
 				color: $white;
-				margin-right: 450px;
-			}
+        margin-right: auto;
+      }
+      .clause {
+        &_item {
+          color: $white;
+          padding: 2px;
+          &:nth-child(1) {
+            margin-right: 60px;
+          }
+          &:hover {
+            border-bottom: 3px solid $white;
+          }
+        }
+      }
 		}
 		.logo {
 			margin-right: 38px;
-		}
-		.clause {
-			&_item {
-				color: $white;
-				padding: 2px;
-				&:nth-child(1) {
-					margin-right: 60px;
-				}
-				&:hover {
-					border-bottom: 3px solid $white;
-				}
-			}
 		}
 	}
 	@include breakpoint(pad) {
@@ -66,9 +67,7 @@ footer {
 		}
 		.copyright {
 			&_content {
-				p {
-					margin-right: 150px;
-				}
+        width: 100%;
 			}
 			.clause {
 				&_item {
@@ -112,7 +111,9 @@ footer {
 			}
 		}
 		.logo {
-			display: block;
+      display: block;
+      width: 46px;
+      height: 28px;
 		}
 	}
 }
